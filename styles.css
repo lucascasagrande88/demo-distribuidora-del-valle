@@ -359,12 +359,15 @@ h1,h2,h3,h4{font-family:var(--head);margin:0;font-weight:600;letter-spacing:-.01
   .menu{display:none}
   .hamb{display:grid}
   .nav-tools .btn:not(.icon-btn){display:none}
+  .cat-grid{grid-template-columns:1fr}
   .prod-grid{grid-template-columns:repeat(2,1fr)}
   .svc-band{padding:28px 20px;margin:0 14px}
   .quick{grid-template-columns:1fr 1fr}
   .about-blocks,.stats{grid-template-columns:1fr}
   .pcard .well .emoji{font-size:52px}
   .band{padding:40px 0}
+  .catcard{padding:18px}
+  .catcard .ct-em{width:56px;height:56px;font-size:30px;border-radius:14px}
 }
 
 /* ===========================================================================
