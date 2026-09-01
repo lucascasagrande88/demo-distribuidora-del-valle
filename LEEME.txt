@@ -1,0 +1,72 @@
+========================================================================
+  DEMO WEB — "Distribuidora del Valle" (distribuidora de alimentos)
+  Hecho por Chimichurri · para mostrar a posibles clientes
+========================================================================
+
+QUÉ ES
+------
+Un demo 100% funcional de una web para una distribuidora mayorista de
+alimentos, con DOS partes que el cliente puede probar en vivo:
+
+  1) LA TIENDA  ......... index.html
+     Web pública: catálogo por categorías, buscador, carrito y cierre
+     de pedido por WhatsApp. Incluye un TUTORIAL GUIADO (popups paso a
+     paso) que arranca solo la primera vez y se puede reabrir con el
+     botón "¿Cómo funciona?" (abajo a la izquierda).
+
+  2) EL PANEL / CRM  .... admin.html
+     Panel de gestión donde se cargan, editan y borran productos, se
+     cambian precios, presentaciones y fotos, y se activa/desactiva qué
+     se ve en la tienda. Clave del demo: demo1234 (ya viene cargada).
+     También tiene su propio tutorial guiado.
+
+Lo que se carga o edita en el panel aparece AL INSTANTE en la tienda.
+
+CÓMO GUARDA LOS DATOS (importante para un demo)
+-----------------------------------------------
+Cada visitante tiene su PROPIO catálogo, guardado en su navegador
+(localStorage). Así cada posible cliente puede "jugar" —agregar, editar,
+borrar, subir y bajar productos— sin pisar lo que ven los demás y sin
+necesidad de una base de datos ni servidor. Para volver al catálogo
+original: Panel → Ajustes → "Volver al catálogo de ejemplo".
+
+En una versión de producción real se conecta a una base online (por
+ej. Supabase) para que el catálogo sea único y compartido. La estructura
+ya está pensada para ese cambio.
+
+SUBIR Y BAJAR EL CATÁLOGO
+-------------------------
+Panel → Ajustes:
+  • "Descargar catálogo (.json)"  → baja una copia (con fotos).
+  • "Subir catálogo"              → recupera una copia guardada.
+
+CÓMO PUBLICARLO EN chimichurridiseno.com/demoweb
+------------------------------------------------
+Es un sitio ESTÁTICO (HTML/CSS/JS), no necesita servidor ni build.
+Subí TODA esta carpeta al repositorio, dentro de una carpeta llamada
+"demoweb", de modo que quede:  chimichurridiseno.com/demoweb/
+(el index.html se abre solo al entrar a /demoweb).
+
+Los enlaces internos son relativos, así que funciona igual en cualquier
+subcarpeta. El archivo "_headers" evita que quede cacheado (Netlify).
+
+PERSONALIZAR (todo genérico y editable)
+---------------------------------------
+  • config.js .......... nombre de la marca, WhatsApp, email, horario,
+                         dirección, pedido mínimo y las CATEGORÍAS.
+  • products-data.js ... catálogo de ejemplo (nombres, precios, íconos).
+  • styles.css ......... colores y tipografías de la tienda.
+
+ARCHIVOS
+--------
+  index.html .......... tienda pública
+  admin.html .......... panel / CRM
+  styles.css .......... estilos de la tienda
+  app.js .............. lógica de la tienda
+  store.js ............ guardado de datos (localStorage)
+  products-data.js .... productos de ejemplo
+  config.js ........... marca + categorías + contacto
+  tour.js / tour.css .. motor del tutorial guiado
+  _headers ............ config de caché (Netlify)
+
+========================================================================
